@@ -1,0 +1,19 @@
+{
+  "name": "code-mappings-node",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "rollup --config rollup.config.mjs",
+    "upload": "sentry-cli releases files $(date +%s) upload-sourcemaps ./bundle.js.map --org=test-b7o --project=node",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@sentry/node": "^7.19.0",
+    "@sentry/profiling-node": "^0.0.12",
+    "@sentry/tracing": "^7.19.0",
+    "rollup": "^3.2.5"
+  }
+}
